@@ -133,7 +133,7 @@ table {
 html,
 body {
   height: 100%;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Lato, Arial, Helvetica, sans-serif;
 }
 header .nav-container {
   padding: 1% 2% 0 2%;
@@ -149,7 +149,7 @@ header .nav-container {
 header .nav-container .nav-logo-container {
   width: 40%;
 }
-header .nav-container .nav-logo-container img {
+header .nav-container .nav-logo-container .img-logo {
   max-width: 12%;
 }
 header .nav-container .nav-items-container {
@@ -159,37 +159,106 @@ header .nav-container .nav-items-container {
 }
 header .nav-container .nav-items-container a {
   text-decoration: none;
-  color: darkgray;
+  color: #1a272f;
   font-size: 0.9rem;
 }
 .main-container {
-  margin: 10%;
+  margin: 10% 0 10% 0;
 }
-.section-container {
+.main-container .section-container1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 10%;
 }
-.section-container .introduction {
+.main-container .section-container1 .introduction-container {
   display: flex;
   flex-direction: column;
   width: 60%;
 }
-.section-container .introduction h1 {
+.main-container .section-container1 .introduction-container h1 {
   padding-top: 15%;
   font-size: 4rem;
   font-weight: bold;
-  color: darkgrey;
+  color: #1a272f;
 }
-.section-container .introduction p {
-  padding-top: 5%;
+.main-container .section-container1 .introduction-container p {
+  padding: 5% 0;
   line-height: 1.8;
   font-size: 1.5rem;
+  color: #444444;
 }
-.section-container .introduction .signature {
+.main-container .section-container1 .introduction-container .img-signature {
   max-width: 30%;
 }
-.section-container .main-img {
+.main-container .section-container1 .img-main {
   width: 40%;
   z-index: 0;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+.main-container .section-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1a272f;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+.main-container .section-container2 .heading-centered {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.main-container .section-container2 .heading-centered h1 {
+  padding-top: 5%;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.main-container .section-container2 .project-imgs-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5% 0;
+  width: 100%;
+}
+.main-container .section-container2 .project-imgs-container div {
+  width: 35vh;
+  height: 35vh;
+}
+.main-container .section-container2 .project-imgs-container div img {
+  max-width: 100%;
+  text-align: center;
+  border-radius: 5%;
+}
+.main-container .section-container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+.main-container .section-container3 h1 {
+  color: #1a272f;
+}
+.main-container .section-container3 .skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 5%;
+  padding: 5% 0;
+}
+.main-container .section-container3 .skills-container .skills-box {
+  background-color: #1a272f;
+  width: 20vh;
+  height: 20vh;
+  margin: 2%;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
 }

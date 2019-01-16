@@ -135,7 +135,8 @@ table {
 }
 
 //VARIABLES
-
+@dark-heading-color: #1a272f;
+@arsenic-color: #444444;
 //MIXINS
 
 .flex(@direction) {
@@ -147,7 +148,7 @@ table {
 html,
 body {
 	height: 100%;
-	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -161,23 +162,19 @@ header {
 		width: 100%;
 		background-color: white;
 		z-index: 300;
-
 		.nav-logo-container {
 			width: 40%;
-
-			img {
+			.img-logo {
 				max-width: 12%;
 			}
 		}
-
 		.nav-items-container {
 			display: flex;
 			justify-content: space-between;
 			width: 40%;
-
 			a {
 				text-decoration: none;
-				color: darkgray;
+				color: @dark-heading-color;
 				font-size: 0.9rem;
 			}
 		}
@@ -185,37 +182,98 @@ header {
 }
 
 .main-container {
-	margin: 10%;
-}
+	margin: 10% 0 10% 0;
 
-.section-container {
-	.flex(row);
-
-	.introduction {
-		display: flex;
-		flex-direction: column;
-		width: 60%;
-
-		h1 {
-			padding-top: 15%;
-			font-size: 4rem;
-			font-weight: bold;
-			color: darkgrey;
+	.section-container1 {
+		.flex(row);
+		margin: 0 10%;
+		.introduction-container {
+			display: flex;
+			flex-direction: column;
+			width: 60%;
+			h1 {
+				padding-top: 15%;
+				font-size: 4rem;
+				font-weight: bold;
+				color: @dark-heading-color;
+			}
+			p {
+				padding: 5% 0;
+				line-height: 1.8;
+				font-size: 1.5rem;
+				color: @arsenic-color;
+			}
+			.img-signature {
+				max-width: 30%;
+			}
 		}
-
-		p {
+		.img-main {
+			width: 40%;
+			z-index: 0;
+			padding-left: 5%;
 			padding-top: 5%;
-			line-height: 1.8;
-			font-size: 1.5rem;
-		}
-
-		.signature {
-			max-width: 30%;
 		}
 	}
 
-	.main-img {
-		width: 40%;
-		z-index: 0;
+	.section-container2 {
+		.flex(column);
+		background-color: @dark-heading-color;
+		margin-top: 5%;
+		padding-bottom: 5%;
+		.heading-centered {
+			display: flex;
+			justify-content: center;
+			color: white;
+			h1 {
+				padding-top: 5%;
+				font-size: 3rem;
+				font-weight: bold;
+			}
+		}
+		.project-imgs-container {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			padding: 5% 0;
+			width: 100%;
+			div {
+				width: 35vh;
+				height: 35vh;
+				img {
+					max-width: 100%;
+					text-align: center;
+					border-radius: 5%;
+				}
+			}
+		}
+	}
+
+	.section-container3 {
+		.flex(column);
+		background-color: white;
+		margin-top: 5%;
+		padding-bottom: 5%;
+		h1 {
+			color: @dark-heading-color;
+		}
+		.skills-container {
+			.flex(row);
+			flex-wrap: wrap;
+			margin: 0 5%;
+			padding: 5% 0;
+
+			.skills-box {
+				background-color: @dark-heading-color;
+				width: 20vh;
+				height: 20vh;
+				margin: 2%;
+				border-radius: 10%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 2rem;
+				color: white;
+			}
+		}
 	}
 }
